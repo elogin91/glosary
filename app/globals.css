@@ -2,26 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+@layer base {
+    h1, h2, h3, h4, label, input, button {
+        font-family: Oswald, Proxima Nova, system-ui, sans-serif;
+    }
+    html {
+        font-family: Merriweather, Proxima Nova, sans-serif;
+        @apply bg-primary;
+    }
+    h1 {
+        @apply text-3xl text-dark  font-bold sm:text-2xl;
+    }
+    h2 {
+		@apply text-2xl uppercase text-dark font-semibold mb-6;
+	}
+    h3 {
+		@apply text-xl uppercase text-dark font-semibold mb-6;
+	}
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.profileImage {
+	@apply rounded-full;
+	width: 240px;
+	height: 400px;
+	object-fit: cover;
+	object-position: 50% 4%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+section {
+	@apply sm:mb-10 mb-5;
+}
+
+.input-form {
+    @apply border border-secundary p-2 w-full bg-light;
+}
+
+.label-form {
+    @apply font-semibold mb-2 text-dark;
+}
+.button-form {
+    @apply bg-third rounded-md hover:bg-dark min-w-100 p-4 text-light font-semibold;
+}
+
+.word-card {
+    @apply border-2 border-secundary m-2 pb-5 bg-gradient-to-r from-secundary to-third  text-light;
+}
+.word-card-header {
+    @apply border-2 border-secundary bg-gradient-to-r from-secundary to-light;
+}
+.word-tags {
+    @apply border-2 border-secundary m-2 p-1 bg-third text-sm;
 }
