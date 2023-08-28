@@ -32,7 +32,7 @@ function WordCard() {
         <div>
             <ul>
                 {data.map(word => (
-                    <div className='word-card'>
+                    <div key={word._id} className='word-card'>
                         <li key={word._id}>
                             <div className='word-card-header'>
                                 <span className='text-lg'>{word.tittle}</span>
