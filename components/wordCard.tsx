@@ -1,6 +1,6 @@
 'use client'
 
-import word from '@/models/word';
+import Word from '@/models/Word'
 import { useEffect, useState } from 'react';
 
 interface Word {
