@@ -1,8 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import React from "react";
-import mongoose from "mongoose";
-import Word from "@/models/word";
-import { get } from "http";
+import Word from "@/models/Word"
 import dbConnect from "@/lib/dbConnect";
 
 
