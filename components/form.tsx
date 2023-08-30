@@ -22,7 +22,7 @@ export const Form = () => {
         }
 
         try {
-            const response = await fetch('/api', {
+            const response = await fetch('/api/word', {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {

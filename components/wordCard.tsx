@@ -17,7 +17,7 @@ function WordCard() {
     useEffect(() => {
         async function fetchData() {
             try {
-                const response = await fetch('/api');
+                const response = await fetch('/api/word');
                 const result = await response.json();
                 setData(result);
             } catch (error) {
