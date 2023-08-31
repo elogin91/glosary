@@ -7,7 +7,7 @@ export default async function Home() {
       <section>
         <article>
           <h1>
-            Add a new word to the  Glosary for Developers.
+            Add a new word to the  Glossary for Developers.
           </h1>
           <Form />
         </article>

@@ -8,7 +8,7 @@ export default async function Home() {
       <section>
         <article>
           <h1>
-            Add a new word to the  Glossary for Developers.
+           Search a new word to the  Glossary for Developers.
           </h1>
           <form action="">
             <Search />

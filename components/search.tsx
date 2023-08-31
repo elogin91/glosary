@@ -2,58 +2,58 @@
 import React, { useState, useRef, useEffect } from "react";
 
 export const Search = () => {
-    const [isWordSent, setWordSent] = useState<boolean>(false);
-    const formRef = useRef<HTMLFormElement | null>(null);
+    // const [isWordSent, setWordSent] = useState<boolean>(false);
+    // const formRef = useRef<HTMLFormElement | null>(null);
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    // async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        const target = e.currentTarget;
+    //     const target = e.currentTarget;
 
-        const tittle = target.elements.namedItem("tittle") as HTMLInputElement;
-        const tags = target.elements.namedItem('tags') as HTMLInputElement;
-        const description = target.elements.namedItem('description') as HTMLInputElement;
+    //     const tittle = target.elements.namedItem("tittle") as HTMLInputElement;
+    //     const tags = target.elements.namedItem('tags') as HTMLInputElement;
+    //     const description = target.elements.namedItem('description') as HTMLInputElement;
         
-        const data = {
-            tittle: tittle.value,
-            tags: tags.value,
-            description: description.value,
-        }
+    //     const data = {
+    //         tittle: tittle.value,
+    //         tags: tags.value,
+    //         description: description.value,
+    //     }
 
-        try {
-            const response = await fetch('/api/word', {
-                method: "POST",
-                body: JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            })
-            if (!response.ok) {
-                throw new Error('HTTP ERROR! status: ' + response.status)
-            }
-            setWordSent(true);
-        }
-        catch (error: any) {
-            console.log("There was a problem with the fetch operation" + error.mesagge);
-        }
-    }
+    //     try {
+    //         const response = await fetch('/api/word', {
+    //             method: "POST",
+    //             body: JSON.stringify(data),
+    //             headers: {
+    //                 "Content-Type": "application/json"
+    //             }
+    //         })
+    //         if (!response.ok) {
+    //             throw new Error('HTTP ERROR! status: ' + response.status)
+    //         }
+    //         setWordSent(true);
+    //     }
+    //     catch (error: any) {
+    //         console.log("There was a problem with the fetch operation" + error.mesagge);
+    //     }
+    // }
 
-    useEffect(() => {
-        let timeout: NodeJS.Timeout;
-        if(isWordSent && formRef) {
-            formRef.current?.reset();
-            setTimeout(()=> {
-                setWordSent(false);
-            }, 9000)
-        }
-        return () => {
-            clearTimeout(timeout)
-        }
-    }, [isWordSent])
+    // useEffect(() => {
+    //     let timeout: NodeJS.Timeout;
+    //     if(isWordSent && formRef) {
+    //         formRef.current?.reset();
+    //         setTimeout(()=> {
+    //             setWordSent(false);
+    //         }, 9000)
+    //     }
+    //     return () => {
+    //         clearTimeout(timeout)
+    //     }
+    // }, [isWordSent])
 
     return (
-        <form onSubmit={handleSubmit} className="p-10" ref={formRef}>
+        <form  className="p-10" ref={""}>
             <div className="m-4 ">
                 <label className="label-form" htmlFor='tittle'>
                     Tittle
@@ -62,7 +62,6 @@ export const Search = () => {
             </div>
 
             <button type="submit" className="button-form">Search</button>
-            {isWordSent && <p> Searching...</p>}
         </form>
     )
 }
