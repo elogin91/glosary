@@ -46,11 +46,11 @@ section {
 }
 
 .word-card {
-    @apply border-2 border-secundary m-2 pb-5 bg-gradient-to-r from-secundary to-third  text-light;
+    @apply border-2 border-secundary m-2 pb-5 bg-gradient-to-r from-secundary to-third  text-light rounded;
 }
 .word-card-header {
-    @apply border-2 border-secundary bg-gradient-to-r from-secundary to-light;
+    @apply border-2 border-secundary bg-gradient-to-r from-secundary to-light rounded;
 }
 .word-tags {
-    @apply border-2 border-secundary m-2 p-1 bg-third text-sm;
+    @apply border-2 border-secundary m-1 p-1 bg-third text-sm rounded;
 }

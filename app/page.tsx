@@ -5,8 +5,6 @@ import Image from 'next/image'
 
 export default async function Home() {
 
-    // const words = await word.find();
-
   return (
     <div>
       <h1>
@@ -15,11 +13,7 @@ export default async function Home() {
       <section>
         <h2>Glosary of Words</h2>
         <article>
-          <h3>Introduce nuevas palabras en el glosario.</h3>
-          <Form />
-        </article>
-        <article>
-          <h3>Palabras de mi glosario.</h3>
+          <h3>All words of develop glosary.</h3>
           <WordCard/>    
         </article>
       </section>
