@@ -1,24 +1,20 @@
 import { Form } from "@/components/form";
+import { Search } from "@/components/search";
 
 export default async function Home() {
 
-    return (
-      <div>
-        <h1>
-          Add a new word to the  Glosary for Developers.
-        </h1>
-        <section>
-          <h2>Glosary of Words</h2>
-          <article>
-            <h3>Insert a word to search his description.</h3>
-            <form action="">
-              <label htmlFor="">Word</label>
-              <input type="text" />
-            </form>
-
-          </article>
-        </section>
-      </div >
-    )
-  }
-  
+  return (
+    <div>
+      <section>
+        <article>
+          <h1>
+            Add a new word to the  Glossary for Developers.
+          </h1>
+          <form action="">
+            <Search />
+          </form>
+        </article>
+      </section>
+    </div >
+  )
+}

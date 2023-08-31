@@ -7,14 +7,12 @@ export default async function Home() {
 
   return (
     <div>
-      <h1>
-        Welcome to the  Glosary for Developers.
-      </h1>
       <section>
-        <h2>Glosary of Words</h2>
         <article>
-          <h3>All words of develop glosary.</h3>
-          <WordCard/>    
+          <h1>
+            All words of the glossary
+          </h1>
+          <WordCard />
         </article>
       </section>
     </div >
