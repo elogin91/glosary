@@ -42,7 +42,7 @@ function WordCard() {
                                 </span>
                             </div>
 
-                            <div>
+                            <div className='word-card-description'>
                                 {word.description}
                             </div>
                         </li>

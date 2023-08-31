@@ -9,7 +9,7 @@
     }
     html {
         font-family: Merriweather, Proxima Nova, sans-serif;
-        @apply bg-primary;
+        @apply bg-gradient-to-r from-primary to-secundary;
     }
     h1 {
         @apply text-3xl text-dark  font-bold sm:text-2xl;
@@ -22,16 +22,12 @@
 	}
 }
 
-.profileImage {
-	@apply rounded-full;
-	width: 240px;
-	height: 400px;
-	object-fit: cover;
-	object-position: 50% 4%;
+main {
+    @apply p-6 ;
 }
 
 section {
-	@apply sm:mb-10 mb-5;
+	@apply sm:mb-10 mb-5 ;
 }
 
 .input-form {
@@ -46,11 +42,21 @@ section {
 }
 
 .word-card {
-    @apply border-2 border-secundary m-2 pb-5 bg-gradient-to-r from-secundary to-third  text-light rounded;
+    @apply  m-2 bg-gradient-to-r from-secundary to-third  rounded;
 }
 .word-card-header {
-    @apply border-2 border-secundary bg-gradient-to-r from-secundary to-light rounded;
+    @apply  rounded-t bg-light text-dark p-1;
 }
 .word-tags {
-    @apply border-2 border-secundary m-1 p-1 bg-third text-sm rounded;
+    @apply border-2 border-secundary m-1 p-1 bg-third text-sm rounded  text-light;
+}
+.word-card-description {
+    @apply text-light pb-5 m-2;
+}
+.nav-bar {
+    @apply mx-auto text-light bg-third ;
+}
+
+.link-containner {
+    @apply hover:bg-light p-2 rounded text-light hover:text-dark ;
 }
