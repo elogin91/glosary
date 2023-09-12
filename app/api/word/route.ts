@@ -33,9 +33,19 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
 export async function GET(req: NextRequest, res: NextResponse) {
     await dbConnect();
-    const words = await Word.find({})
 
-   return NextResponse.json(
-        words
-    )
+    if (!req.json()) {
+        const words = await Word.find({})
+
+        return NextResponse.json(
+            words
+        )
+    }
+    else {
+        const data = await req.json();
+        const words = await Word.find({data})
+        return NextResponse.json(
+            words
+        )
+    }
 }
